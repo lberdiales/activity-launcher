@@ -7,40 +7,83 @@
     tools:context=".MainFragment">
 
     <Button
-        android:id="@+id/button_red"
+        android:id="@+id/button_red_by_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#f00"
-        android:text="RED"
-        app:layout_constraintBottom_toTopOf="@id/button_green"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#ff0000"
+        android:text="RED (Activity)"
+        app:layout_constraintBottom_toTopOf="@id/button_green_by_activity"
+        app:layout_constraintEnd_toStartOf="@id/button_red_by_fragment"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
         tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/button_green"
+        android:id="@+id/button_red_by_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#0f0"
-        android:text="GREEN"
-        app:layout_constraintBottom_toTopOf="@id/button_blue"
-        app:layout_constraintEnd_toEndOf="@id/button_red"
-        app:layout_constraintStart_toStartOf="@id/button_red"
-        app:layout_constraintTop_toBottomOf="@id/button_red"
+        android:backgroundTint="#66ff0000"
+        android:text="RED (Fragment)"
+        app:layout_constraintBottom_toBottomOf="@id/button_red_by_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_red_by_activity"
+        app:layout_constraintTop_toTopOf="@id/button_red_by_activity"
+        app:layout_constraintVertical_chainStyle="packed"
         tools:ignore="HardcodedText" />
 
     <Button
-        android:id="@+id/button_blue"
+        android:id="@+id/button_green_by_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#00f"
-        android:text="BLUE"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#00ff00"
+        android:text="GREEN (Activity)"
+        app:layout_constraintBottom_toTopOf="@id/button_blue_by_activity"
+        app:layout_constraintEnd_toStartOf="@id/button_green_by_fragment"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_red_by_activity"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_green_by_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#6600ff00"
+        android:text="GREEN (Fragment)"
+        app:layout_constraintBottom_toBottomOf="@id/button_green_by_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_green_by_activity"
+        app:layout_constraintTop_toTopOf="@id/button_green_by_activity"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_blue_by_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#0000ff"
+        android:text="BLUE (Activity)"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/button_green"
-        app:layout_constraintStart_toStartOf="@id/button_green"
-        app:layout_constraintTop_toBottomOf="@id/button_green"
+        app:layout_constraintEnd_toStartOf="@id/button_blue_by_fragment"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_green_by_activity"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/button_blue_by_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#660000ff"
+        android:text="BLUE (Fragment)"
+        app:layout_constraintBottom_toBottomOf="@id/button_blue_by_activity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_blue_by_activity"
+        app:layout_constraintTop_toTopOf="@id/button_blue_by_activity"
         tools:ignore="HardcodedText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
