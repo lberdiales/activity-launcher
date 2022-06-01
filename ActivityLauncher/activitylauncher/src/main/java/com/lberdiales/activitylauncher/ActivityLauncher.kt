@@ -5,6 +5,8 @@ import androidx.activity.result.ActivityResultCaller
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContract
 
+// Inspired in https://github.com/DylanCaiCoding/ActivityResultLauncher
+
 class ActivityLauncher<I, O>(
     caller: ActivityResultCaller,
     contract: ActivityResultContract<I, O>
